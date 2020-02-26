@@ -7,11 +7,11 @@ using Newtonsoft.Json.Linq;
 public class InterFace : IHttpHandler
 {
 
-
+    //HTTP请求处理函数
     public void ProcessRequest(HttpContext context)
     {
         context.Response.ContentType = "text/plain";
-        string method = context.Request["method"];
+        string method = context.Request["method"];//获取数据context中key为method的value
         string strReturn = "";
         if (method == "httpGetToken")
         {
@@ -523,12 +523,15 @@ public class InterFace : IHttpHandler
     /// <param name="Authorization">Authorization:Bearer+token </param>
     /// <param name="values"></param>
     /// <returns></returns>
+    /// 
+    //参数：url(interFaceUrl+MethodUrl)  hd(Authorization(Bearer +token))   cs(空) 
+    //返回：服务器返回的数据（string格式）
     private string http_getMethod(HttpContext context)
     {
         string MethodUrl = context.Request["MethodUrl"].ToString();
         string Authorization = context.Request["token"].ToString();
         Authorization = "Authorization:Bearer " + Authorization;
-        string strReturn = "";//是否可以获取 token
+        string strReturn = "";
         string url = PublicMethod.Public_GetWebConfigStr("interFaceUrl") + MethodUrl;
         System.Collections.Generic.List<string> l = new System.Collections.Generic.List<string>();
         System.Net.CookieContainer cs = new System.Net.CookieContainer();

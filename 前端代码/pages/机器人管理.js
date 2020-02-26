@@ -1,4 +1,6 @@
-﻿function connectRootView(vRootJson) {
+﻿//将默认机器人的数据vRootJson({"robotName":"室外巡检机器人","robotIP":"192.168.0.88","flirIP":"192.168.0.65","vlip":"192.168.0.64"})
+//设置机器人管理页面的<iframe id="frameWebVideo1"）其中的视频url
+function connectRootView(vRootJson) {
     
     var vlip = vRootJson.vlip;//视频1
     var flirIP = vRootJson.flirIP;//视频2 
@@ -10,7 +12,7 @@
     document.getElementById("frameWebVideo2").src = url2;
 }
 
-//装载巡检任务 注意 只有选中机器人后才能调用这些
+//装载巡检状态浏览 注意 只有选中机器人后才能调用这些
 function load_xunjianrenwu(robotIp) {
     $.ajax({
         type: "get",
@@ -52,6 +54,7 @@ function load_xunjianrenwu(robotIp) {
                 console.log(setting.past);
                 console.log(setting.next);
 
+                //机器人管理页面center中的部分文字内容
                 $("#totalDeviceNum").text(data["finishedPoints"].length + data["leftPoints"].length);
                 $("#CurDeviceNum").text(data["currentPoint"]["devicename"]);
                 $("#percent").text(data["progressString"]);
@@ -80,7 +83,7 @@ function selectedRoot(vIp) {
             if (data) {
                 if (data.success) {
                     //layer.msg("选定机器人[" + vIp + "]完成!");
-                    Public_isSelectedRoot = 1;
+                    Public_isSelectedRoot = 1; 
                     load_xunjianrenwu(vIp);//***********装载巡检任务 注意 只有选中机器人后才能调用这些
 
                     //获得机器人地图
@@ -127,6 +130,7 @@ function getMap() {
     });
 }
 
+//请求数据填入“实时信息”Tab页里面的表格
 function getdb1() {
 
     $.ajax({
@@ -139,15 +143,16 @@ function getdb1() {
         },
         dataType: "json",
         success: function (data) {
-            if (!data.success) {
+            if (!data.success) {            //请求失败：弹框显示data.detail
                 layer.msg(data.detail);
                 return;
             }
-            maingrid1.set({ data: data });
+            maingrid1.set({ data: data });  //请求成功：将后台反馈的数据{ data: data }填入maingrid1（“实时信息”Tab页里面的表格）
         }
     });
 }
 
+//请求数据填入“设备告警信息”Tab页里面的表格
 function getdb2() {
     $.ajax({
         type: "get",
@@ -163,9 +168,9 @@ function getdb2() {
                 layer.msg(data.detail);
                 return;
             }
-            var jsonObj = JSON.parse(data.Rows); 
-            var jsonArr = [];
-            for (var i = 0; i < jsonObj.length; i++) {
+            var jsonObj = JSON.parse(data.Rows); //“实时信息”Tab页里面的表格所有内容
+            var jsonArr = [];                   //detectionStatus != "正常"的所有行内容
+            for (var i = 0; i < jsonObj.length; i++) {          //i：行数
                 if (jsonObj[i]["detectionStatus"] != "正常") {
                     jsonArr.push(jsonObj[i]);
                 }
@@ -177,6 +182,7 @@ function getdb2() {
     });
 }
 
+//请求数据填入“系统告警信息”Tab页里面的表格
 function getdb3() {
     $.ajax({
         type: "get",

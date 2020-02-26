@@ -77,12 +77,12 @@
 
             });
 
-            //开始循环装载菜单
+            //开始装载菜单
             getMenuDb();
 
         });
 
-        function getMenuDb() {
+        function getMenuDb() {                              //给index.js中的menuArray变量添加【任务管理】菜单（根据后端反馈数据），再调用initMenu()拼接菜单
 
             $.ajax({
                 type: "get",
@@ -93,22 +93,22 @@
                     , MethodUrl: "/taskTemplateTypes?r=" + Math.random()
                 },
                 dataType: "json",
-                success: function (data) {
+                success: function (data) {                          //处理反馈数据data
 
                     console.log(data);
                     if (data.detail == "success") {
 
-                        var array = [];
+                        var array = [];                             //任务管理菜单array
 
-                        $.each(data.data, function (i, o) {
+                        $.each(data.data, function (i, o) {        
 
-                            var jo = { title: "", childen: [] };
-                            jo.title = o.name;
-                            $.each(o.children, function (y, oy) {
+                            var jo = { title: "", childen: [] };    //任务管理菜单中的一行jo
+                            jo.title = o.name;                      //data.data[i].name
+                            $.each(o.children, function (y, oy) {   //data.data[i].children
 
 
                                 jo.childen.push({
-                                    "title": oy.name,
+                                    "title": oy.name,               //data.data.children[y].name
                                     "id": oy.name,
                                     "url": "pages/巡检模板.aspx?type=" + o.id + "&miniType=" + oy.id
                                 });
@@ -126,7 +126,7 @@
                                  }]
                              }
                         );
-                        array.push(
+                        array.push(                                 //array中元素的数据格式
                             {
 		                        "title": "任务展示",
 		                        "childen": [{
@@ -137,15 +137,15 @@
 		                    }
                         )
 
-                        var json = {
-                            "menuid": "2",
-                            "imgSrc": "images/common/rwgl.png",
-                            "menuText": "任务管理",
-                            "url": "",
-                            "subMenuClass": "task-manage",
-                            "subMenu": array
+                        var json = {                                //主菜单中的某一项（第二项）
+                            "menuid": "2",                          //
+                            "imgSrc": "images/common/rwgl.png",     //
+                            "menuText": "任务管理",                 //
+                            "url": "",                              //
+                            "subMenuClass": "task-manage",          //
+                            "subMenu": array                        
                         }; //这里得到的数据
-                        menuArray.splice(1, 0, json);
+                        menuArray.splice(1, 0, json); //splice粘接：在menuArray中index=1的地方删除0个元素，并在此处插入json
                         initMenu();
 
                     }
@@ -159,22 +159,31 @@
 
         }
 
-        function initMenu() {
+        function initMenu() {               //开始遍历menuArray拼接HTML菜单
             
             if (public_accessIds) {
-                $(".nav-list").html("");
-                var vHtml = '<li><img src="images/common/up01.png" alt=""></li>';
+                $(".nav-list").html(""); //创建主菜单（上下箭头之间）<ul class="nav-list">
+                var vHtml = '<li><img src="images/common/up01.png" alt=""></li>';//上箭头
 
-                var vMyMenuIdArray = public_accessIds.split(",");
-                for (var i = 0; i < menuArray.length; i++) {
-
+                var vMyMenuIdArray = public_accessIds.split(","); //获取服务器端反馈的public_accessIds存入vMyMenuIdArray
+                                                                    /*menuArray：在index.js中定义的菜单信息（每一项都为json，如下）
+                                                                    {
+                                                                        "menuid": "1",
+                                                                        "imgSrc": "images/common/sbgj.png",
+                                                                        "menuText": "机器人管理",
+                                                                        "url": "pages/机器人管理.aspx",
+                                                                        "subMenuClass": "",
+                                                                        "subMenu": []
+                                                                    }  
+                                                                    */
+                for (var i = 0; i < menuArray.length; i++) {    
                     var json = menuArray[i];
-                    var menuId = json.menuid;
-                    if ($.inArray(menuId, vMyMenuIdArray) == -1) {
+                    var menuId = json.menuid;//
+                    if ($.inArray(menuId, vMyMenuIdArray) == -1) {  
                         continue;
                     }
 
-                    vHtml += '<li class="have-bg">';
+                    vHtml += '<li class="have-bg">';//主菜单一行
                     vHtml += '<img src="' + json.imgSrc + '" alt="">';
                     if (json.subMenuClass == "") {
 
@@ -209,12 +218,18 @@
                 vHtml += '<li><img src="images/common/down01.png" alt=""></li>';
                 $(".nav-list").html(vHtml); //装载上
 
+                //nav-list ul li span点击主菜单（7项）下的子菜单的点击事件    将导航菜单旁边的crumbs设置显示内容（机器人管理>机器人管理）
                 $(".nav-list ul li").on("click", "span", function () {
-                    var spanIndex = $(".have-bg span").index(this);
-                    $(".header .crumbs .first").text($(".have-bg .text").eq(firstTextIndex).text());
-                    $(".header .crumbs .second").text($(".have-bg span").eq(spanIndex).text());
-                    navFadeToggle();
+                    var subSelectedItemIndex = $(".have-bg span").index(this); //第SubSelectedItemIndex个span（子菜单选项）
+                    var mainSelectedItem = $(this).parent().parent().parent(); //主菜单项                                   
+                    var mainSelectedItemIndex = $(this).parent().parent().parent().parent().children().index(mainSelectedItem) - 1; //第mainSelectedItemIndex个li（主菜单选项）
+                                            //span(黑色小项)-li(蓝色小项|黑色小项)-ul(子菜单表格)-li(所选中主菜单选项)-ul(主菜单)-li(所有主菜单选项)
+                    $(".header .crumbs .first").text($(".have-bg .text").eq(mainSelectedItemIndex).text());
+                    $(".header .crumbs .second").text($(".have-bg span").eq(subSelectedItemIndex).text());
+                    navFadeToggle(); //设置菜单、界面？？隐藏效果
                 });
+
+                //.nav-list .text点击主菜单（7项）的点击事件    将导航菜单旁边的crumbs设置显示内容（机器人管理>机器人管理）
                 $(".nav-list .text").on("click", "a", function () {
                     var spanIndex = $(".have-bg span").index(this);
                     //$(".header .crumbs .first").text($(this).text());
@@ -264,9 +279,8 @@
             
             
             <div id="navtab">
-                <ul class="closeall"><li onclick="closeall()">关闭所有
-                      
-                </li></ul> 
+                <ul class="closeall"><li onclick="closeall()">关闭所有</li></ul> 
+
                 <div tabid="机器人管理" title="机器人管理" lselected="true" >
                     <iframe frameborder="0" name="home" id="home" src="kong.htm"></iframe>
                    

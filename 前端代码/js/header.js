@@ -69,7 +69,7 @@
      //开启一个新的页面
     function f_MyAddTab(tabid, url, text) {
             
-        if(navtab.isTabItemExist(tabid)){
+        if(navtab.isTabItemExist(tabid)){  //	判断tab是否存在
             navtab.selectTabItem(tabid);
         }else{
             navtab.addTabItem({ tabid: tabid, text: text, url: url });

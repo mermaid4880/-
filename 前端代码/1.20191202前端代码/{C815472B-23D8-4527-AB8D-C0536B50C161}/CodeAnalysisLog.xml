@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="DES_En_De" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DesDecrypt(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="DES_En_De.cs" Line="76">在方法 'DES_En_De.DesDecrypt(string)' 中，请在对 'mStream' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="DES_En_De.cs" Line="75">在方法 'DES_En_De.DesDecrypt(string)' 中，请在对 'provider' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DesEncrypt(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="DES_En_De.cs" Line="52">在方法 'DES_En_De.DesEncrypt(string)' 中，请在对 'mStream' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="DES_En_De.cs" Line="51">在方法 'DES_En_De.DesEncrypt(string)' 中，请在对 'provider' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UserMd5(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="DES_En_De.cs" Line="93">在方法 'DES_En_De.UserMd5(string)' 中，请在对 'md5' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GetFunctionInfo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetGridInfoDt(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="GetFunctionInfo.cs" Line="133">在方法 'GetFunctionInfo.GetGridInfoDt(string, string)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetGridInfoDt(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="GetFunctionInfo.cs" Line="144">在方法 'GetFunctionInfo.GetGridInfoDt(string, string, string)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HTMLHelper_new" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetHtml(System.String,HttpHeader_new,System.Net.CookieContainer)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="HttpHeader_new.cs" Line="64">可以在方法 'HTMLHelper_new.GetHtml(string, HttpHeader_new, CookieContainer)' 中多次释放对象 'responseStream'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 64</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetHtml_DELETE(System.String,HttpHeader_new,System.Net.CookieContainer)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="HttpHeader_new.cs" Line="251">可以在方法 'HTMLHelper_new.GetHtml_DELETE(string, HttpHeader_new, CookieContainer)' 中多次释放对象 'responseStream'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 251</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PublicMethod" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Public_getSorcDt(System.Data.DataTable,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="PublicMethod.cs" Line="322">在方法 'PublicMethod.Public_getSorcDt(DataTable, string, string)' 中，请在对 'dt2' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ReplaceStr" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DataTable_partDt(System.Data.DataTable,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="ReplaceStr.cs" Line="106">在方法 'ReplaceStr.DataTable_partDt(DataTable, int, int)' 中，请在对 'dtResult' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SQLHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'SQLHelper' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员: 'SqlConnection', 'SqlCommand'。如果以前提供过 'SQLHelper'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BuildQueryCommand(System.Data.SqlClient.SqlConnection,System.String,System.Data.IDataParameter[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1339">在方法 'SQLHelper.BuildQueryCommand(SqlConnection, string, IDataParameter[])' 中，'command' 对象未按所有异常路径释放。请在对 'command' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1339">传递给 'SQLHelper.BuildQueryCommand(SqlConnection, string, IDataParameter[])' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'storedProcName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateProcCommand(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="560">在方法 'SQLHelper.CreateProcCommand(string, SqlParameter[])' 中，'cmd' 对象未按所有异常路径释放。请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="560">传递给 'SQLHelper.CreateProcCommand(string, SqlParameter[])' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'procName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateProcDataAdapter(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="595">在方法 'SQLHelper.CreateProcDataAdapter(string, SqlParameter[])' 中，'da' 对象未按所有异常路径释放。请在对 'da' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="595">传递给 'SQLHelper.CreateProcDataAdapter(string, SqlParameter[])' 中的 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' 的查询字符串可能包含以下变量 'procName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateSQLCommand(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="492">在方法 'SQLHelper.CreateSQLCommand(string, SqlParameter[])' 中，'cmd' 对象未按所有异常路径释放。请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="492">传递给 'SQLHelper.CreateSQLCommand(string, SqlParameter[])' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'cmdText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateSQLDataAdapter(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="461">在方法 'SQLHelper.CreateSQLDataAdapter(string, SqlParameter[])' 中，'da' 对象未按所有异常路径释放。请在对 'da' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="461">传递给 'SQLHelper.CreateSQLDataAdapter(string, SqlParameter[])' 中的 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' 的查询字符串可能包含以下变量 'cmdText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteSqlTran(System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1175">在方法 'SQLHelper.ExecuteSqlTran(List&lt;string&gt;)' 中，请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1187">传递给 'SQLHelper.ExecuteSqlTran(List&lt;string&gt;)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'SQLStringList[n]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteSqlTran(System.Collections.Hashtable)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1141">在方法 'SQLHelper.ExecuteSqlTran(Hashtable)' 中，请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteSqlTran(System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="366">在方法 'SQLHelper.ExecuteSqlTran(string[])' 中，请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="377">传递给 'SQLHelper.ExecuteSqlTran(string[])' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'SQLStringList[n]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteSqlTranWithIndentity(System.Collections.Hashtable)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1024">在方法 'SQLHelper.ExecuteSqlTranWithIndentity(Hashtable)' 中，请在对 'cmd' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDataReader(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="106">传递给 'SQLHelper.GetDataReader(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDataSet(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="164">在方法 'SQLHelper.GetDataSet(string)' 中，'dt' 对象未按所有异常路径释放。请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="163">在方法 'SQLHelper.GetDataSet(string)' 中，请在对 'da' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="161">传递给 'SQLHelper.GetDataSet(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDataSet_throw(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1514">'SQLHelper.GetDataSet_throw(string)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1508">在方法 'SQLHelper.GetDataSet_throw(string)' 中，'dt' 对象未按所有异常路径释放。请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1507">在方法 'SQLHelper.GetDataSet_throw(string)' 中，请在对 'da' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1505">传递给 'SQLHelper.GetDataSet_throw(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDataTable(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="129">在方法 'SQLHelper.GetDataTable(string)' 中，'dt' 对象未按所有异常路径释放。请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="127">在方法 'SQLHelper.GetDataTable(string)' 中，请在对 'da' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="127">传递给 'SQLHelper.GetDataTable(string)' 中的 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProcDataTable(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="700">在方法 'SQLHelper.GetProcDataTable(string)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="701">在方法 'SQLHelper.GetProcDataTable(string)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProcDataTable(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="726">在方法 'SQLHelper.GetProcDataTable(string, SqlParameter[])' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="727">在方法 'SQLHelper.GetProcDataTable(string, SqlParameter[])' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetReturnString(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="517">在方法 'SQLHelper.GetReturnString(string)' 中，请在对 'l_DataAdapter' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="518">在方法 'SQLHelper.GetReturnString(string)' 中，请在对 'l_DataTable' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="517">传递给 'SQLHelper.GetReturnString(string)' 中的 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' 的查询字符串可能包含以下变量 'p_SqlString'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSingle(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="981">'SQLHelper.GetSingle(string, params SqlParameter[])' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareCommand(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1207">传递给 'SQLHelper.PrepareCommand(SqlCommand, SqlConnection, SqlTransaction, string, SqlParameter[])' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'cmdText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunProcedure(System.String,System.Data.IDataParameter[],System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1277">在方法 'SQLHelper.RunProcedure(string, IDataParameter[], string)' 中，'dataSet' 对象未按所有异常路径释放。请在对 'dataSet' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1284">在方法 'SQLHelper.RunProcedure(string, IDataParameter[], string)' 中，请在对 'sqlDA' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunProcedure_longtime(System.String,System.Data.IDataParameter[],System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1309">在方法 'SQLHelper.RunProcedure_longtime(string, IDataParameter[], string)' 中，'dataSet' 对象未按所有异常路径释放。请在对 'dataSet' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1316">在方法 'SQLHelper.RunProcedure_longtime(string, IDataParameter[], string)' 中，请在对 'sqlDA' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSql_getObjClass(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="253">传递给 'SQLHelper.RunSql_getObjClass(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlInt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="223">传递给 'SQLHelper.RunSqlInt(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlInt(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="285">传递给 'SQLHelper.RunSqlInt(string, SqlParameter[])' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlNo(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="317">传递给 'SQLHelper.RunSqlNo(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlPlanID(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="344">传递给 'SQLHelper.RunSqlPlanID(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlReturn(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="409">传递给 'SQLHelper.RunSqlReturn(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlStr(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="195">传递给 'SQLHelper.RunSqlStr(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectDT(System.Data.DataTable,System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="SQLHelper.cs" Line="1368">在方法 'SQLHelper.SelectDT(DataTable, params string[])' 中，'newTable' 对象未按所有异常路径释放。请在对 'newTable' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="writeTxtCls" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#writeTxtToCurrtFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="88">可以在方法 'writeTxtCls.writeTxtToCurrtFile(string, string)' 中多次释放对象 'fs'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 88</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="80">在方法 'writeTxtCls.writeTxtToCurrtFile(string, string)' 中，请在对 'fs' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeTxtToFile(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="67">可以在方法 'writeTxtCls.writeTxtToFile(string)' 中多次释放对象 'fs'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 67</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="59">在方法 'writeTxtCls.writeTxtToFile(string)' 中，请在对 'fs' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeTxtToFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="44">可以在方法 'writeTxtCls.writeTxtToFile(string, string)' 中多次释放对象 'fs'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 44</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="36">在方法 'writeTxtCls.writeTxtToFile(string, string)' 中，请在对 'fs' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeTxtToFileAndUpdate(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="153">可以在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中多次释放对象 'fs'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 153</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="166">可以在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中多次释放对象 'fs'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 166</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="137">可以在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中多次释放对象 'fs_Read'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 137</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="145">在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中，请在对 'fs' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="158">在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中，请在对 'fs' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\App_Code" File="writeTxtCls.cs" Line="111">在方法 'writeTxtCls.writeTxtToFileAndUpdate(string, string, string)' 中，请在对 'fs_Read' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\App_Web_4rrcfm3d.dll">
+   <Modules>
+    <Module Name="app_web_4rrcfm3d.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="export_sql" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateZipFile(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="148">可以在方法 'export_sql.CreateZipFile(string, string)' 中多次释放对象 'File.Create(zipFilePath)'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 148</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="148">可以在方法 'export_sql.CreateZipFile(string, string)' 中多次释放对象 's'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 148</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="122">在方法 'export_sql.CreateZipFile(string, string)' 中，请在对 'File.Create(zipFilePath)' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GenerateData(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="366">在方法 'export_sql.GenerateData(HttpContext)' 中，'fs2' 对象未按所有异常路径释放。请在对 'fs2' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="206">在方法 'export_sql.GenerateData(HttpContext)' 中，请在对 'Table_info' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="316">在方法 'export_sql.GenerateData(HttpContext)' 中，请在对 'Table_info' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="181">在方法 'export_sql.GenerateData(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="158">在方法 'export_sql.GenerateData(HttpContext)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#virTable()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="409">在方法 'export_sql.virTable()' 中，'dt' 对象未按所有异常路径释放。请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteToStream()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="export_sql.ashx" Line="106">在方法 'export_sql.WriteToStream()' 中，'file' 对象未按所有异常路径释放。请在对 'file' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Grid" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetGridJSON(System.Web.HttpContext)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="副本 Grid.ashx" Line="331">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="副本 Grid.ashx" Line="332">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="副本 Grid.ashx" Line="400">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="副本 Grid.ashx" Line="625">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'set1' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\App_Web_ofsctcbf.dll">
+   <Modules>
+    <Module Name="app_web_ofsctcbf.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="ajax" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#checkTableHas(System.String,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="793">在方法 'ajax.checkTableHas(string, Dictionary&lt;string, string&gt;)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#checkTableHas(System.String,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="829">在方法 'ajax.checkTableHas(string, Dictionary&lt;string, string&gt;, Dictionary&lt;string, string&gt;)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_add_db(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="261">在方法 'ajax.public_add_db(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_add_f(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="518">在方法 'ajax.public_add_f(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_del_db(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="398">在方法 'ajax.public_del_db(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_del_f(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="736">在方法 'ajax.public_del_f(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_update_db(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="351">在方法 'ajax.public_update_db(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#public_update_f(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="ajax.ashx" Line="657">在方法 'ajax.public_update_f(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Grid" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetGridJSON(System.Web.HttpContext)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="Grid.ashx" Line="123">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="Grid.ashx" Line="161">在方法 'Grid.GetGridJSON(HttpContext)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="select" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetGridJSON(System.Web.HttpContext)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\handler" File="select.ashx" Line="52">在方法 'select.GetGridJSON(HttpContext)' 中，请在对 'dt' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\App_Web_x3i44u2a.dll">
+   <Modules>
+    <Module Name="app_web_x3i44u2a.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="sendCommand" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#For_send_Msg(System.String,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\aboutOrder" File="sendCommand.ashx" Line="89">在方法 'sendCommand.For_send_Msg(string, string)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#For_send_Msg_new(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2020-01-11 02:06:59Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="e:\0.TEAM\1.机器人后台\3.程序\1.后台程序\1.前端\1.20191202前端代码\aboutOrder" File="sendCommand.ashx" Line="44">在方法 'sendCommand.For_send_Msg_new(string, string, string)' 中，请在对 'ds' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>再次引发以保留堆栈详细信息</Name>
+   <Description>重复引发捕获的异常时，请使用 IL 再次引发指令保留原始堆栈详细信息。</Description>
+   <Resolution Name="Default">{0} 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>具有可释放字段的类型应该是可释放的</Name>
+   <Description>声明可释放成员的类型也应实现 IDisposable。如果该类型没有任何非托管资源，请不要在其上实现终结器。</Description>
+   <Resolution Name="DependsOnFix">在 {0} 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员: {1}。如果以前提供过 {0}，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>不要多次释放对象</Name>
+   <Description>可以多次调用正确实现的 Dispose 方法，而不会引发异常。但是，并不保证所有情况下都会如此。若要避免生成 System.ObjectDisposedException，您不应对一个对象多次调用 Dispose。</Description>
+   <Resolution Name="Default">可以在方法 {1} 中多次释放对象 {0}。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 148</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>丢失范围之前释放对象</Name>
+   <Description>如果在对某个可释放对象的所有引用超出范围之前未显式释放该对象，则当垃圾回收器运行该对象的终结器时，会在某个不确定时间释放该对象。由于可能会发生阻止该对象的终结器运行的意外事件，因此应改为显式释放该对象。</Description>
+   <Resolution Name="ExceptionEdge">在方法 {0} 中，{1} 对象未按所有异常路径释放。请在对 {1} 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Resolution>
+   <Resolution Name="NonExceptionEdge">在方法 {0} 中，请在对 {1} 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>未能找到间接引用的程序集“Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c”。此程序集不是分析所必需的，但是分析结果可能不完整。此程序集已由 C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\NPOI.dll 引用。</ExceptionMessage>
+  </Exception>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>未能找到间接引用的程序集“Liger.Data, Version=1.0.0.0, Culture=neutral”。此程序集不是分析所必需的，但是分析结果可能不完整。此程序集已由 C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\GSPT.Common.dll 引用。</ExceptionMessage>
+  </Exception>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>未能找到间接引用的程序集“Liger.Common, Version=1.0.0.0, Culture=neutral”。此程序集不是分析所必需的，但是分析结果可能不完整。此程序集已由 C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\GSPT.Common.dll 引用。</ExceptionMessage>
+  </Exception>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>未能找到间接引用的程序集“GSPT.Entity, Version=1.0.0.0, Culture=neutral”。此程序集不是分析所必需的，但是分析结果可能不完整。此程序集已由 C:\Users\613-ROBOT-1\AppData\Local\Temp\tmp2E2B.tmp.cadir\bin\GSPT.Common.dll 引用。</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

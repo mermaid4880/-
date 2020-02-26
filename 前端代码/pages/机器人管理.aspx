@@ -115,28 +115,28 @@
 
     <script type="text/javascript">
 
-        var intTabPage = 1;
+        var intTabPage = 1;//页面底部框index（1：实时信息 2：设备告警信息 3：系统告警信息）
         var public_token = "<%=public_token %>";
-        var maingrid1 = null, maingrid2 = null, maingrid3 = null;
+        var maingrid1 = null, maingrid2 = null, maingrid3 = null;//
         var bodyHeight = document.documentElement.clientHeight; //页面高度
         var Public_isSelectedRoot = 0;//是否成功选择了机器人
         var public_lunxunSeconds = "<%=public_lunxunSeconds%>";//轮询的秒数.
-        var public_robotIp = "";
+        var public_robotIp = "";//机器人ID 
         var rootArray = [];//装载机器人数组 [{"robotName":"室外巡检机器人","robotIP":"192.168.0.88","flirIP":"192.168.0.65","vlip":"192.168.0.64"}] 
         $(function () {
             //任务情况
             //开启轮询
             window.setInterval(function () {
                 if (Public_isSelectedRoot == 1) {
-                    load_xunjianrenwu(public_robotIp);//这是上面的巡检任务
+                    load_xunjianrenwu(public_robotIp); //装载机器人管理页面center中的部分文字内容
                     if (intTabPage == 1) {
-                        getdb1();
+                        getdb1();   //请求数据填入“实时信息”Tab页里面的表格
                     }
                     else if (intTabPage == 2) {
-                        getdb2();
+                        getdb2();   //请求数据填入“设备告警信息”Tab页里面的表格
                     }
                     else if (intTabPage == 3) {
-                        getdb3();
+                        getdb3();   //请求数据填入“系统告警信息”Tab页里面的表格
                     }
                 }
             }, parseInt(public_lunxunSeconds));
@@ -144,7 +144,7 @@
             //$("#frameWebVideo1").attr("src", "../webVideo/webVideo1.aspx");
             //$("#frameWebVideo2").attr("src", "../webVideo/webVideo2.aspx");
 
-            //装载机器人ip
+            //向接口请求数据data[i].robotIP+data[i].robotName装载机器人下拉菜单
             $.ajax({
                 type: "get",
                 url: "../handler/InterFace.ashx?r=" + Math.random(),
@@ -162,11 +162,11 @@
                     data = data.data;
                     //处理返回值
                     if (data) {
-                        //装载起来 [{"robotName":"室外巡检机器人","robotIP":"192.168.0.88","flirIP":"192.168.0.65","vlip":"192.168.0.64"}] 
+                        //装载起来 [{"robotName":"室外巡检机器人","robotIP":"192.168.0.88","flirIP":"192.168.0.65","vlip":"192.168.0.64"}，...] 
                         if (data.length > 0) {
                             rootArray = data;//这里定义一下变量
                             var optionstring = "";
-                            var firstJson = {};//第一个为默认机器人
+                            var firstJson = {}; //默认机器人（默认下拉菜单中的第一个）
                             for (var i = 0; i < data.length; i++) {
                                 if (i == 0) {
                                     firstJson = data[i];
@@ -182,11 +182,11 @@
                             selectedRoot(firstJson.robotIP);
                             //这里连接视频
                             connectRootView(firstJson);
-                            Public_isSelectedRoot = 1;//默认选择了机器人
+                            Public_isSelectedRoot = 1; //成功选择了机器人
                             public_robotIp = firstJson.robotIP;
 
-                            //通过h5传值
-                            localStorage.setItem("robotIp", firstJson.robotIP);
+                            //将key和value存入本地浏览器的localStorage中
+                            localStorage.setItem("robotIp", firstJson.robotIP);     //默认机器人
                             localStorage.setItem("flirIP", firstJson.flirIP);
                             localStorage.setItem("vlip", firstJson.vlip);
                         }
@@ -196,7 +196,7 @@
 
             //绑定机器人下拉框事件
             $("#robot").on("change", function () {
-                var selectValue = $(this).val();
+                var selectValue = $(this).val(); //this是id=robot的<select>里面所选中的<option>  .val()返回<option>的value(即data[i].robotIP)
                 alert(selectValue);
                 if (selectValue) {
 
@@ -219,20 +219,21 @@
                 }
             });
 
+            //“实时信息”Tab页里面的表格   maingrid1：数据展示组件Grid
             maingrid1 = $("#maingrid1").ligerGrid({
-                columns: [
+                columns: [      //Array columns：列
                     { display: '识别时间', name: 'time', width: 300 },
                     { display: '点位名称', name: 'meterName', width: 548 },
                     { display: '识别类型', name: 'detectionType', width: 350 },
                     { display: '识别结果', name: 'detectionValue', width: 350 },
                     { display: '告警等级', name: 'detectionStatus', width: 300 }
                 ]
-                , pageSize: 5
-                , pageSizeOptions: [5, 10, 20, 30, 50]
-                , width: '100%'
-                , height: 206
+                , pageSize: 5       //	Int pageSize：每页默认的结果数（行数）
+                , pageSizeOptions: [5, 10, 20, 30, 50]  //Array	pageSizeOptions：可选择设定的每页结果数
+                , width: '100%'     //String|Int width：宽度值,支持百分比
+                , height: 206       //String|Int height：高度值,支持百分比
             });
-
+            //“设备告警信息”Tab页里面的表格
             maingrid2 = $("#maingrid2").ligerGrid({
                 columns: [
                     { display: '识别时间', name: 'time', width: 300 },
@@ -246,7 +247,7 @@
                 , width: '100%'
                 , height: 206
             });
-
+            //“系统告警信息”Tab页里面的表格
             maingrid3 = $("#maingrid3").ligerGrid({
                 columns: [
                     { display: '报警时间', name: '', width: '400px' },
@@ -261,7 +262,7 @@
             });
             console.log(bodyHeight);
 
-            $("#layout1").ligerLayout({
+            $("#layout1").ligerLayout({     //#layout1  整个机器人管理页面   将整个页面分为5部分（上下左右中）
                 height: 930,
                 rightWidth: 500,
                 heightDiff: -80,
@@ -269,7 +270,7 @@
                 allowRightResize: false,
                 bottomHeight: 240
             });
-            $("#navtab1").ligerTab({
+            $("#navtab1").ligerTab({        //#navtab1  机器人管理页面的bottom部分
                 onBeforeSelectTabItem: function (tabid) {
 
                 },
@@ -316,6 +317,7 @@
 
     <form id="form1" runat="server">
         <div id="layout1">
+            <!--机器人选择，巡检状态浏览，巡检地图展示-->
             <div position="center" >
                 <div style="height: 550px; width: 100%;">
                     <div style="height: 120px; width: 100%;background-color:RGB(212,236,234); padding: 10px;">
@@ -337,12 +339,13 @@
                         </p>
                     </div>
                     
+                    <!--下面的部分干啥的？？-->
                     <h1 style="display:none"></h1>
                     <input  type="button" id="but"  class="off" value="点我画图" style="width: 100px;height: 100px;background-color: #00a0e9;display:none"/>
                     <input type="button"  id="but1" onclick="but1()" class="off"  style="width: 100px;height: 100px;background-color: #00a0e9;display:none" value="点我复位"/>
                     <div id="myText" style="display:none"></div>
                     
-                    <!--这里是图片识别-->
+                    <!--这里是画地图？？-->
                     <div style="height: 200px; width: 100%;  padding-top: 20px;text-align:center;display:block;line-height:400px">
                         
                         <div id="canvasBox">
@@ -352,6 +355,7 @@
                     </div>
                 </div>
             </div>
+            <!--视频监视-->
             <div position="right" title="视频实时监控" >
 
                 <div id="divCamera" class="camera" style="width:100%;height:592px" >
@@ -365,7 +369,7 @@
                 </div>
 
             </div>
-
+            <!--告警信息-->
             <div position="bottom" style="height:500;">
 
                 <div id="navtab1" style="width: 100%;background-color: RGB(212,236,234); color: #000;" >
@@ -390,6 +394,7 @@
 
         </div>
     </form>
+    <!--下面的div干啥的？？-->
     <div id ="menu" tabindex="-1">
         <input  class="menu_button" type="button" value="初始定位"  onclick="chushidingwei();"/>
         <input  class="menu_button" type="button" value="一键返航"  onclick="yijianfanhang();"/>
