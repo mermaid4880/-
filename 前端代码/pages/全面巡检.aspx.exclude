@@ -1,0 +1,136 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="全面巡检.aspx.cs" Inherits="pages_全面巡检" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="../lib/ligerUI/skins/Gray2014/css/all.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+
+    <link href="../js/layui/css/layui.css" rel="stylesheet" type="text/css" />
+    <script src="../js/layer/layer.js" type="text/javascript"></script>
+
+    <script src="../lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+    <script src="../lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+      <style type="text/css">
+        body{ padding:10px; margin:0;}
+        #layout1{  width:100%; margin:40px;  height:400px;
+                   margin:0; padding:0;}
+        #accordion1 { height:270px;}
+         h4{ margin:20px;}
+       
+        #divHead p
+        {
+            height:30px;
+           <%-- background-color:Red;--%>
+            } 
+    </style>
+
+     <script type="text/javascript">
+
+         var grid = null;
+         var bodyHeight = document.documentElement.clientHeight;//页面高度
+         $(function () {
+
+             $("#layout1").ligerLayout({ leftWidth: 270, topHeight: 300 });
+
+
+             //装载树结构
+             $("#ftree").attr("src", "../tree/systemTree.aspx");
+             //这里装载grid
+
+             grid = $("#maingrid").ligerGrid({
+                 columns: [
+                { display: '主键', name: 'CustomerID', align: 'left', width: 120 },
+                { display: '公司名', name: 'CompanyName', minWidth: 60 },
+                { display: '联系名', name: 'ContactName', width: 50, align: 'left' }
+                , { display: '联系名', name: 'ContactName', minWidth: 140 }
+                , { display: '联系名', name: 'ContactName', minWidth: 140 }
+                , { display: '城市', name: 'City' }
+                ]
+                , pageSize: 30
+                , width: '100%'
+                , height: bodyHeight - 400
+             });
+
+            
+
+         });
+
+         //保存设置
+         function saveSet() {
+             layer.confirm('确定要保存吗？',{ icon: 3, title: '提示',offset: '200px' }, function (index) {
+                 //do something
+                 layer.msg("保存成功");
+             });
+         }
+         function setAgin() {
+             layer.confirm('确定要重置吗？',{ icon: 3, title: '提示',offset: '200px' }, function (index) {
+                 //do something
+                 layer.msg("保存成功");
+             });
+         }
+             
+     </script> 
+
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="layout1">
+            <div position="top" id="divHead">
+                 
+                <div>
+                <p>巡检类型：<input type="radio" />类型1 <input type="radio" />类型1 <input type="radio" />类型1 <input type="radio" />类型1</p>
+                <p>设备区域：<input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1</p>
+                <p>设备区域：<input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1</p>
+                <p>设备区域：<input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1</p>
+                <p>设备区域：<input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1 <input type="checkbox" />类型1</p>
+                </div>
+               <div style="float:right;padding-right:10px">
+                    <input type="button" id="btnSave" class="layui-btn" value="保存" onclick="saveSet()" ></input>
+                    <input type="button" id="btnChongzhi" class="layui-btn" value="重置" onclick="setAgin()" ></input>
+                </div>
+            </div>
+            <div  position="left" title="企业架构树" style="padding-left:10px">
+                <iframe id="ftree" frameborder=0 height="600px" width="100%" src="kong.htm" ></iframe>
+            </div>
+            <div position="center" title="任务编辑列表">
+                
+
+                <div class="layui-form" style="padding-top:8px;" >
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">关键字</label>
+                    <div class="layui-input-inline">
+                      <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+
+                     <label class="layui-form-label">关键字2</label>
+                    <div class="layui-input-inline">
+                      <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                    
+                    <div class="layui-input-inline"  style="width:80px">
+			            <input type="button" class="layui-btn layui-btn-sm layui-btn-primary" value="查询"></input>
+		            </div>
+
+                  </div>
+                 </div>
+
+                <div id="maingrid" style="margin:0; padding:0"></div>
+
+
+            </div>
+          
+        </div> 
+
+    </form>
+
+     
+
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+    <script>
+        var public_token = "";
+        function getToken() {
+
+            $.ajax({
+                type: "get",
+                url: "handler/InterFace.ashx",
+                data: { method: "httpGetToken" },
+                dataType: "text",
+                success: function (data) {
+
+                    public_token = data;
+                    alert(data);
+                }
+            });
+
+        }
+
+        function httpGet() {
+
+            $.ajax({
+                type: "get",
+                url: "handler/InterFace.ashx",
+                data: {
+                     method: "http_getMethod"
+                    , MethodUrl: "/areas"
+                    , token: public_token
+                     },
+                dataType: "text",
+                success: function (data) {
+
+                    
+                    alert(data);
+                }
+            });
+
+        }
+
+        function httpPost() {
+
+            $.ajax({
+                type: "post",
+                url: "handler/InterFace.ashx",
+                data: {
+                    method: "http_PostMethod"
+                    , MethodUrl: "/control/robot-motion?operation=left&speed=200"
+                    , token: public_token
+                    , PostData: ""
+                    },
+                dataType: "text",
+                success: function (data) {
+
+
+                    alert(data);
+                }
+            });
+
+        }
+
+        function httpGetGrid() {
+
+            $.ajax({
+                type: "get",
+                url: "handler/InterFace.ashx",
+                data: {
+                    method: "http_getGridMethod"
+                    , MethodUrl: "/areas"
+                    , token: public_token
+                },
+                dataType: "text",
+                success: function (data) {
+
+
+                    alert(data);
+                }
+            });
+
+        }
+
+        function login() {
+
+            $.ajax({
+                type: "get",
+                url: "handler/InterFace.ashx",
+                data: {
+                    method: "login"
+                    , username: "mozhichao"
+                    , password: "123"
+                },
+                dataType: "text",
+                success: function (data) {
+
+
+                    alert(data);
+                }
+            });
+
+        }
+
+        function httpPut() {
+
+            $.ajax({
+                type: "post",
+                url: "handler/InterFace.ashx",
+                data: {
+                    method: "http_PutMethod"
+                    , MethodUrl: "/taskTemplates/3"
+                    , token: public_token
+                    , PostData: "meters=1,2,3"
+                },
+                dataType: "text",
+                success: function (data) {
+
+
+                    alert(data);
+                }
+            });
+
+        }
+
+        function httpDel() {
+            $.ajax({
+                type: "get",
+                url: "handler/InterFace.ashx",
+                data: {
+                    method: "http_DelMethod"
+                    , MethodUrl: "/taskTemplates/3"
+                    , token: public_token
+                },
+                dataType: "text",
+                success: function (data) {
+
+
+                    alert(data);
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="获取token" onclick="getToken()"  />
+    <br />
+    <br />
+
+     <input type="button" value="登录" onclick="login()"  />
+    <br />
+    <br />
+
+
+    <input type="button" value="get获取Area地址" onclick="httpGet()"  />
+
+    <br />
+    <br />
+
+     <input type="button" value="get获取Area地址Grid" onclick="httpGetGrid()"  />
+
+    <br />
+    <br />
+
+    <input type="button" value="Post机器人运动控制" onclick="httpPost()"  />
+
+    <br />
+    <br />
+
+    <input type="button" value="put更新方法" onclick="httpPut()"  />
+
+    <br />
+    <br />
+
+    <input type="button" value="del删除方法" onclick="httpDel()"  />
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+1.客户端需要安装的海昌两个插件包 
+../WebVideoCtrl/WebComponents.exe
+../WebComponentsKit(has rem cfg).exe
+系统需要运行在ie11内核下，推荐使用360浏览器经典模式（若win7系统，360依赖于系统的ie内核，需更新ie）
+需要修改html内的ip 位于巡检结果浏览页面、生成报表页面

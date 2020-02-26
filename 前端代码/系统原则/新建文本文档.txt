@@ -1,0 +1,14 @@
+前台界面中 
+
+
+
+
+元素 id 用于 赋值用
+name用于 后台查询、添加、修改 用
+
+ <div class="layui-form-item">
+                <label class="layui-form-label">总公司名称</label>
+                <div class="layui-input-block">
+                  <input type="text" name="Zgs_name" op="keyValue"  lay-verify="required" style="width: 200px;" placeholder="请输入总公司名称" autocomplete="off" class="layui-input">
+                </div>
+          </div>
